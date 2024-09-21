@@ -1,2 +1,29 @@
-# Digital-Signal-Processing
+## Digital-Signal-Processing
 This repository is intended for calculations on the subject of digital signal processing 
+
+# Frequência de amostragem em Hertz
+Representada como fs
+Função: Define quantas vezes por segundo o sinal será amostrado. Um valor comum de 44100 Hz é frequentemente utilizado em áudio digital, pois permite capturar a faixa de frequência do som que podemos ouvir.
+
+# Intervalo de tempo entre as Amostras
+Representado como Ts
+Descrição: Inverso da frequência de amostragem.
+Cálculo: Ts = 1/fs
+Função: Representa o intervalo de tempo entre as amostras, ou seja, o tempo que passa entre cada amostra do sinal.
+
+# Frequência fundamental
+Representado como f0
+Descrição: é a menor frequência de um sinal periódico e é a base sobre a qual as outras frequências (harmônicos) são construídas. Em outras palavras, ela representa a frequência básica do sinal e determina o seu tom.
+Função: A frequência fundamental é a base de um sinal sonoro e define a sua qualidade tonal
+
+# Número de amostras.
+Representada como n:
+Descrição: Array que representa o número de amostras.
+Cálculo: n = np.arange(fs)
+Função: Cria um array de valores inteiros de 0 até -1fs. Isso representa o índice de cada amostra que será gerada, totalizando fs amostras.
+
+# Sinail 
+Representado como xn:
+Descrição: Sinal gerado (neste caso, um sinal coseno).
+Cálculo: xn = np.cos(2 * np.pi * f0 * n * Ts)
+Função: Calcula os valores do sinal coseno para cada índice n. A expressão 2 * np.pi * f0 * n * Ts calcula a fase do sinal para cada amostra, resultando em um vetor que contém os valores do sinal coseno ao longo do tempo.
